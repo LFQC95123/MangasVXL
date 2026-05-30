@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mangas VXL - Tienda de mangas en español">
+    <title>Mangas VXL</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <h1>MANGAS <span>VXL</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/catalogo.html">Catálogo</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="pages/carrito.html" class="carrito-link">🛒<span id="contador-carrito">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <main>
+
+        <section class="banner">
+            <div class="banner-content">
+                <h2>MANGAS VXL</h2>
+                <p>
+                    Descubre los mejores mangas en español
+                    y amplía tu colección con los títulos más populares.
+                </p>
+
+                <a href="pages/catalogo.html" class="btn">
+                    Explorar Catálogo
+                </a>
+            </div>
+        </section>
+
+        <!-- DESTACADOS -->
+        <section class="destacados">
+            <h2>Mangas Destacados</h2>
+
+            <div id="productos-destacados" class="contenedor-productos">
+                <!-- JavaScript insertará los productos -->
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS -->
+        <section class="categorias">
+            <h2>Categorías</h2>
+
+            <div class="contenedor-categorias">
+                <article class="categoria">
+                    <h3>Shonen</h3>
+                </article>
+
+                <article class="categoria">
+                    <h3>Acción</h3>
+                </article>
+
+                <article class="categoria">
+                    <h3>Fantasía</h3>
+                </article>
+
+                <article class="categoria">
+                    <h3>Sobrenatural</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- NOSOTROS -->
+        <section class="nosotros">
+            <h2>¿Por qué elegir Mangas VXL?</h2>
+
+            <p>
+                Ofrecemos mangas en español de las series más populares,
+                con una experiencia de compra rápida, segura y diseñada
+                para verdaderos fanáticos del manga.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-contenido">
+
+            <h3>Mangas VXL</h3>
+
+            <p>
+                Tu tienda especializada en mangas en español.
+            </p>
+
+            <p>
+                © 2026 Mangas VXL. Todos los derechos reservados.
+            </p>
+
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/productos.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>
