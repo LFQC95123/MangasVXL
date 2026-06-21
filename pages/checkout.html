@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finaliza tu compra en Mangas VXL. Formulario de checkout seguro.">
+  <meta name="author" content="Grupo_E">
+  <title>Checkout | Mangas VXL</title>
+
+  <!-- Open Graph|Para compartir en las diversas redes sociales -->
+  <meta property="og:title"       content="Checkout | MangasVXL">
+  <meta property="og:description" content="Finaliza tu compra en Mangas VXL. Formulario de checkout seguro.">
+  <meta property="og:image"       content="https://lfqc95123.github.io/MangasVXL/img/logo.png">
+  <meta property="og:url"         content="https://lfqc95123.github.io/MangasVXL/pages/checkout.html">
+  <meta property="og:type"        content="website">
+  <!-- Twitter Card|Para compartir en Twitter(X) -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="MangasVXL">
+  <meta name="twitter:description" content="Explora mangas populares y encuentra tus historias favoritas.">
+  <meta name="twitter:image"       content="https://lfqc95123.github.io/MangasVXL/img/logo.png"> 
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons CDN — S14 diapositiva 15 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " aria-label="Navegación principal">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand-custom" href="../index.html">MANGAS <span>VXL</span></a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="carrito.html" aria-label="Ver carrito de compras"><i class="bi bi-cart3"></i>
+                <span class="d-none d-md-inline">Carrito</span>
+                <span id="contador-carrito" class="badge bg-danger rounded-pill ms-1" aria-live="polite">0</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion" aria-labelledby="titulo-checkout">
+      <div class="container">
+
+        <h2 class="seccion-titulo" id="titulo-checkout">Finalizar Compra</h2>
+
+        <!--
+          NUEVO ARCHIVO COMPLETO.
+          Layout Bootstrap de dos columnas:
+          col-lg-7: formulario de datos del cliente
+          col-lg-5: resumen del pedido (sticky)
+        -->
+        <div class="row g-4">
+
+          <!-- ============================================
+               COLUMNA IZQUIERDA: Formulario de checkout
+               ============================================ -->
+          <!-- ============================================
+     COLUMNA IZQUIERDA: Formulario de checkout
+     ============================================ -->
+          <div class="col-lg-7">
+
+            <form id="formulario-checkout" class="form-card" novalidate aria-label="Formulario de datos de envío y pago">
+
+              <h3 class="h5 mb-4 border-bottom pb-2">Datos del cliente</h3>
+
+              <!-- Nombre completo -->
+              <div class="mb-3">
+                <label for="co-nombre" class="form-label">Nombre completo <span class="text-danger">*</span></label>
+                  <input type="text" id="co-nombre" class="form-control" placeholder="Ej: Luis Fernando Quispe Castillo" autocomplete="name">
+                    <span id="error-co-nombre"class="campo-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Correo -->
+              <div class="mb-3">
+                <label for="co-email" class="form-label"> Correo electrónico <span class="text-danger">*</span></label>
+                  <input type="email" id="co-email" class="form-control" placeholder="correo@ejemplo.com" autocomplete="email">
+                    <span id="error-co-email" class="campo-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Celular -->
+              <div class="mb-3">
+                <label for="co-telefono" class="form-label"> Celular <span class="text-danger">*</span></label>
+                  <input type="tel" id="co-telefono" class="form-control" placeholder="999 999 999" maxlength="9" inputmode="numeric" autocomplete="tel">
+                    <span id="error-co-telefono" class="campo-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <h3 class="h5 mt-4 mb-3 border-bottom pb-2">Dirección de envío</h3>
+
+              <!-- Dirección -->
+              <div class="mb-3">
+                <label for="co-direccion" class="form-label">Dirección <span class="text-danger">*</span></label>
+                  <input type="text" id="co-direccion" class="form-control" placeholder="Av. Mi casa 123" autocomplete="street-address">
+                    <span id="error-co-direccion" class="campo-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Ciudad -->
+              <div class="mb-3">
+                <label for="co-ciudad" class="form-label"> Ciudad <span class="text-danger">*</span></label>
+                  <input type="text" id="co-ciudad" class="form-control" placeholder="Ej: Arequipa" autocomplete="address-level2">
+                    <span id="error-co-ciudad" class="campo-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <h3 class="h5 mt-4 mb-3 border-bottom pb-2">Método de pago</h3>
+
+              <div class="mb-4">
+                <label for="co-pago" class="form-label">Método de pago <span class="text-danger">*</span></label>
+                <select id="co-pago" class="form-select">
+                  <option value="">— Seleccionar —</option>
+                  <option value="yape">Yape / Plin</option>
+                  <option value="tarjeta">Tarjeta de crédito / débito</option>
+                  <option value="contraentrega">Pago contra entrega</option>
+                  <option value="transferencia">Transferencia bancaria</option>
+                </select>
+
+                <span id="error-co-pago" class="campo-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 btn-lg"><i class="bi bi-check-circle me-2"></i>Confirmar pedido</button>
+              <p class="text-muted small mt-3 text-center"><span class="text-danger">*</span> Campos obligatorios</p>
+
+            </form>
+
+            <!-- Mensaje de éxito -->
+            <div id="mensaje-exito"class="d-none text-center py-5 form-card">
+              <div class="mb-3" style="font-size:4rem;">✅</div>
+                <h3 class="text-success">¡Pedido confirmado!</h3>
+                  <p class="text-muted">Gracias por tu compra. Recibirás un correo con los detalles de tu pedido.</p>
+              <a href="catalogo.html" class="btn btn-primary mt-3">Seguir comprando</a>
+            </div>
+
+          </div>
+
+          <!-- ============================================
+               COLUMNA DERECHA: Resumen del pedido
+               (checkout.js lo rellena dinámicamente)
+               ============================================ -->
+          <div class="col-lg-5">
+            <div class="card shadow-sm p-4 sticky-lg-top" style="top:80px;">
+
+              <h3 class="h5 mb-3 border-bottom pb-2">Resumen del pedido</h3>
+
+              <!-- checkout.js inserta los ítems aquí -->
+              <div id="resumen-pedido" class="mb-3">
+                <p class="text-muted text-center small">Cargando...</p>
+              </div>
+
+              <hr>
+
+              <div class="d-flex justify-content-between fw-bold fs-5">
+                <span>Total:</span>
+                <span id="resumen-total" class="text-danger">S/ 0.00</span>
+              </div>
+
+              <a href="carrito.html" class="btn btn-outline-secondary w-100 mt-3"><i class="bi bi-arrow-left me-2"></i>Volver al carrito</a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <h3>Mangas VXL</h3>
+      <p>Tu tienda especializada en mangas en español.</p>
+      <p class="mb-0">© 2026 Mangas VXL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/productos.js"></script>
+  <script src="../js/contador.js"></script>
+  <script src="../js/checkout.js"></script>
+
+</body>
+</html>

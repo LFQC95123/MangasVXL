@@ -1,109 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito | Mangas VXL</title>
-        <!--Meta Datos-->
-    <meta name="description" content="Explora y descubre mangas populares con una interfaz moderna y fácil de usar.">
-    <meta name="keywords" content="manga, anime, mangas online, lectura, mangas populares">
-    <meta name="author" content="Grupo_E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tu carrito de compras en Mangas VXL.">
+  <meta name="author" content="Grupo_E">
+  <title>Carrito | Mangas VXL</title>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Carrito | MangasVXL">
-    <meta property="og:description" content="Explora mangas populares y encuentra tus historias favoritas.">
-    <meta property="og:image" content="https://lfqc95123.github.io/MangasVXL/img/logo.png">
-    <meta property="og:url" content="https://lfqc95123.github.io/MangasVXL/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_PE">
+  <!-- Open Graph|Para compartir en las diversas redes sociales -->
+  <meta property="og:title"       content="Carrito | MangasVXL">
+  <meta property="og:description" content="Explora mangas populares y encuentra tus historias favoritas.">
+  <meta property="og:image"       content="https://lfqc95123.github.io/MangasVXL/img/logo.png">
+  <meta property="og:url"         content="https://lfqc95123.github.io/MangasVXL/pages/carrito.html">
+  <meta property="og:type"        content="website">
+  <!-- Twitter Card|Para compartir en Twitter(X) -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="MangasVXL">
+  <meta name="twitter:description" content="Explora mangas populares y encuentra tus historias favoritas.">
+  <meta name="twitter:image"       content="https://lfqc95123.github.io/MangasVXL/img/logo.png"> 
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MangasVXL">
-    <meta name="twitter:description" content="Explora mangas populares y encuentra tus historias favoritas.">
-    <meta name="twitter:image" content="https://lfqc95123.github.io/MangasVXL/img/logo.png">
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-
-        <div class="logo">
-            <h1>MANGAS <span>VXL</span></h1>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navegación principal">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand-custom" href="../index.html">MANGAS <span>VXL</span></a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link active" href="carrito.html" aria-current="page" aria-label="Ver carrito"><i class="bi bi-cart3"></i>
+                <span class="d-none d-md-inline">Carrito</span>
+                <span id="contador-carrito" class="badge bg-danger rounded-pill ms-1" aria-live="polite">0</span></a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="carrito.html">🛒 <span id="contador-carrito">0</span></a></li>
-            </ul>
-        </nav>
+  <main>
+    <section class="seccion" aria-labelledby="titulo-carrito">
+      <div class="container">
 
-    </header>
+        <h2 class="seccion-titulo" id="titulo-carrito">Tu Carrito de Compras</h2>
 
-    <!-- CONTENIDO -->
-    <main>
+        <div class="row g-4">
 
-        <section class="destacados">
+          <!-- ============================================
+               COLUMNA IZQUIERDA: Productos del carrito
+               ============================================ -->
+          <div class="col-lg-8">
 
-            <h2>Tu Carrito de Compras</h2>
-
-            <div id="contenedor-carrito">
-
-                <!-- carrito.js insertará aquí los productos -->
-
+            <!--
+              VISTA MÓVIL: cards apiladas (d-block d-md-none)
+              Se muestra solo en pantallas menores a md (768px).
+              carrito.js inserta los article.card aquí.
+            -->
+            <div id="contenedor-carrito" class="d-md-none">
+              <!-- carrito.js inserta cards en móvil -->
             </div>
 
-            <div id="resumen-carrito">
-
-                <h3>
-                    Total:
-                    <span id="total-carrito">
-                        S/ 0.00
-                    </span>
-                </h3>
-
-                <br>
-
-                <button id="vaciar-carrito" class="btn">
-                    Vaciar carrito
-                </button>
-
-                <button class="btn">
-                    Finalizar compra
-                </button>
-
+            <!--
+              VISTA DESKTOP: tabla responsive (d-none d-md-block)
+              Se muestra desde md (768px) en adelante.
+              NUEVO — S14 diapositiva 23: table-responsive + table-striped + table-hover.
+              Usa d-none d-md-block para ocultarla en móvil y mostrarla en tablet/desktop.
+              carrito.js también llena el tbody de esta tabla.
+            -->
+            <div class="d-none d-md-block">
+              <div class="table-responsive">
+                <!--
+                  table: clase base de Bootstrap para tablas
+                  table-striped: filas alternas con fondo gris claro (zebra)
+                  table-hover: resalta la fila al pasar el cursor
+                  align-middle: centra el contenido verticalmente en las celdas
+                  S14 diapositiva 23
+                -->
+                <table class="table table-striped table-hover align-middle"
+                       aria-label="Productos en el carrito">
+                  <thead class="table-dark">
+                    <tr>
+                      <th scope="col">Producto</th>
+                      <th scope="col">Precio unit.</th>
+                      <th scope="col" class="text-center">Cantidad</th>
+                      <th scope="col" class="text-end">Subtotal</th>
+                      <th scope="col" class="text-center">Acción</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabla-carrito-body">
+                    <!-- carrito.js inserta las filas <tr> aquí -->
+                  </tbody>
+                </table>
+              </div>
             </div>
 
-        </section>
+          </div>
 
-    </main>
+          <!-- ============================================
+               COLUMNA DERECHA: Resumen y total
+               ============================================ -->
+          <div class="col-lg-4">
+            <div id="resumen-carrito" class="card shadow-sm p-4 sticky-lg-top" >
+              <h3 class="h5 mb-3 border-bottom pb-2"><i class="bi bi-receipt me-2"></i>Resumen del pedido</h3>
 
-    <!-- FOOTER -->
-    <footer>
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Productos:</span>
+                <span id="cantidad-items" class="fw-semibold">0 productos</span>
+              </div>
 
-        <h3>Mangas VXL</h3>
+              <div class="d-flex justify-content-between mb-3">
+                <span class="text-muted">Subtotal:</span>
+                <span id="subtotal-carrito" class="fw-semibold">S/ 0.00</span>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between mb-4">
+                <span class="fw-bold fs-5">Total:</span>
+                <span id="total-carrito" class="fw-bold fs-5 text-danger">S/ 0.00</span>
+              </div>
 
-        <p>
-            Tu tienda especializada en mangas en español.
-        </p>
+              <button id="btn-finalizar" class="btn btn-primary w-100 mb-2"><i class="bi bi-credit-card me-2"></i>Finalizar compra</button>
 
-        <p>
-            © 2026 Mangas VXL. Todos los derechos reservados.
-        </p>
+              <button id="vaciar-carrito" class="btn btn-outline-danger w-100"><i class="bi bi-trash me-2"></i>Vaciar carrito</button>
+            </div>
+          </div>
 
-    </footer>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <script src="../js/productos.js"></script>
-    <script src="../js/carrito.js"></script>
-    <script src="../js/contador.js"></script>
+  <footer>
+    <div class="container">
+      <h3>Mangas VXL</h3>
+      <p>Tu tienda especializada en mangas en español.</p>
+      <p class="mb-0">© 2026 Mangas VXL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/productos.js"></script>
+  <script src="../js/contador.js"></script>
+  <script src="../js/carrito.js"></script>
 
 </body>
 </html>

@@ -1,455 +1,298 @@
-/* =========================
+/* ==========================================================
+   MANGAS VXL
+   style.css
+   Contiene únicamente los estilos personalizados.
+   Bootstrap se encarga del layout responsive.
+========================================================== */
+
+/* ==========================
    VARIABLES
-========================= */
+========================== */
+
 :root{
-    --color-primary:#e63946;
-    --color-secondary:#1d3557;
-    --color-light:#f8f9fa;
-    --color-dark:#111111;   
-    --color-accent:#ffd60a;
-    --shadow:0 5px 15px rgba(0,0,0,.15);
-    --radius:12px;
+  --color-primary:#e63946;
+  --color-secondary:#1d3557;
+  --color-light:#f8f9fa;
+  --color-dark:#111111;
+  --color-accent:#ffd60a;
+
+  --shadow:0 5px 15px rgba(0,0,0,.15);
+  --radius:12px;
+  --transition:.3s ease;
 }
 
-/* =========================
-   RESET
-========================= */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+/* ==========================
+   ESTILOS GENERALES
+========================== */
 
 body{
-    font-family:'Poppins', sans-serif;
-    background:var(--color-light);
-    color:var(--color-dark);
-    line-height:1.6;
-}
-
-img{
-    max-width:100%;
-    display:block;
+  background:var(--color-light);
+  color:var(--color-dark);
 }
 
 a{
-    text-decoration:none;
+  text-decoration:none;
+  transition:var(--transition);
 }
 
-ul{
-    list-style:none;
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar-brand-custom{
+  font-size:1.7rem;
+  font-weight:700;
+  color:#fff;
 }
 
-/* =========================
-   HEADER
-========================= */
-header{
-    background:var(--color-dark);
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    position:sticky;
-    top:0;
-    z-index:100;
+.navbar-brand-custom span{
+  color:var(--color-primary);
 }
 
-.logo h1{
-    font-family:'Bebas Neue', sans-serif;
-    letter-spacing:2px;
-    font-size:2.2rem;
+.navbar-brand-custom:hover{
+  color:#fff;
 }
 
-.logo span{
-    color:var(--color-primary);
+.nav-link{
+  transition:var(--transition);
 }
 
-nav ul{
-    display:flex;
-    gap:25px;
+.nav-link:hover{
+  color:var(--color-primary)!important;
 }
 
-nav a{
-    color:white;
-    font-weight:500;
-    transition:.3s;
-}
+/* ==========================
+   BANNER PRINCIPAL
+========================== */
 
-nav a:hover{
-    color:var(--color-primary);
-}
-
-/* =========================
-   BANNER
-========================= */
 .banner{
-    min-height:80vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('../img/banner.jpg');
-    background-size:cover;
-    background-position:center;
-    color:white;
+  min-height:75vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:4rem 1rem;
+
+  background:linear-gradient(rgba(0,0,0,.55),
+             rgba(0,0,0,.55)),
+             url("../img/banner.jpg") center/cover no-repeat;
+
+  color:white;
 }
+
 .banner-content{
-    max-width:700px;
+  max-width:700px;
 }
-.banner h2{
-    font-family:'Bebas Neue', sans-serif;
-    font-size:5rem;
-    letter-spacing:3px;
+
+.banner h1{
+  font-size:3rem;
+  font-weight:700;
 }
+
 .banner p{
-    font-size:1.1rem;
-    margin:20px 0;
+  font-size:1.1rem;
+  margin:1.5rem 0;
 }
 
-/* =========================
-   BOTÓN
-========================= */
-.btn{
-    display:inline-block;
-    background:var(--color-primary);
-    color:white;
-    padding:14px 30px;
-    border-radius:var(--radius);
-    font-weight:600;
-    transition:.3s;
+/* ==========================
+   BOTÓN PERSONALIZADO
+========================== */
+
+.btn-vxl{
+  display:inline-block;
+  background:var(--color-primary);
+  color:white;
+  padding:.9rem 2rem;
+  border-radius:var(--radius);
+  transition:var(--transition);
 }
 
-.btn:hover{
-    transform:translateY(-3px);
+.btn-vxl:hover{
+  background:#c1121f;
+  color:white;
 }
 
-/* =========================
-   DESTACADOS
-========================= */
-.destacados{
-    padding:80px 8%;
+/* ==========================
+   SECCIONES
+========================== */
+
+.seccion{
+  padding:5rem 0;
 }
 
-.destacados h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2rem;
+.seccion-titulo{
+  text-align:center;
+  margin-bottom:3rem;
+  font-weight:700;
 }
 
-.contenedor-productos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-/* =========================
+/* ==========================
    TARJETAS DE PRODUCTOS
-========================= */
+========================== */
+
 .producto{
-    background:white;
-    border-radius:var(--radius);
-    overflow:hidden;
-    box-shadow:var(--shadow);
-    transition:.3s;
+  border:none;
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:var(--transition);
 }
 
 .producto:hover{
-    transform:translateY(-8px);
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
 }
 
 .producto img{
-    width:100%;
-    height:400px;
-    object-fit:cover;
-    display:block;
-}
-
-.producto-info{
-    padding:20px;
-}
-
-.producto h3{
-    margin-bottom:10px;
-    font-size:1rem;
-    min-height:70px;
+  height:340px;
+  object-fit:cover;
 }
 
 .precio{
-    color:var(--color-primary);
-    font-weight:bold;
-    font-size:1.2rem;
-    margin-bottom:15px;
+  color:var(--color-primary);
+  font-weight:bold;
 }
 
-/* =========================
+/* ==========================
    CATEGORÍAS
-========================= */
-.categorias{
-    padding:80px 8%;
-    background:white;
+========================== */
+
+.card-categoria{
+  display:block;
+  padding:2rem 1rem;
+  border-radius:var(--radius);
+  background:white;
+  text-align:center;
+  color:var(--color-dark);
+  box-shadow:var(--shadow);
+  transition:var(--transition);
 }
 
-.categorias h2{
-    text-align:center;
-    margin-bottom:40px;
+.card-categoria:hover{
+  background:var(--color-primary);
+  color:white;
 }
 
-.contenedor-categorias{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-}
-
-.categoria{
-    background:var(--color-secondary);
-    color:white;
-    text-align:center;
-    padding:30px;
-    border-radius:var(--radius);
-    transition:.3s;
-}
-
-.categoria:hover{
-    transform:translateY(-5px);
-}
-
-/* =========================
-   NOSOTROS
-========================= */
-.nosotros{
-    padding:80px 8%;
-    text-align:center;
-}
-
-.nosotros p{
-    max-width:800px;
-    margin:auto;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer{
-    background:var(--color-dark);
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-/* =========================
-   BUSCADOR
-========================= */
-
-.contenedor-buscador{
-    display:flex;
-    justify-content:center;
-    padding:20px 8%;
-}
-
-#busqueda{
-    width:100%;
-    max-width:600px;
-    padding:15px 20px;
-    border:2px solid #ddd;
-    border-radius:var(--radius);
-    font-size:1rem;
-    outline:none;
-    transition:.3s;
-}
-
-#busqueda:focus{
-    border-color:var(--color-primary);
-}
-
-/* =========================
+/* ==========================
    FILTROS
-========================= */
+========================== */
 
-.contenedor-filtros{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
+.btn-filtro.activo{
+  background:var(--color-primary);
+  color:white;
 }
 
-.btn-filtro{
-    background:var(--color-secondary);
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:600;
-    transition:.3s;
+/* ==========================
+   NOSOTROS
+========================== */
+
+.nosotros{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
 }
 
-.btn-filtro:hover{
-    background:var(--color-primary);
-    transform:translateY(-3px);
-}
-/* =========================
-   DETALLE DEL MANGA
-========================= */
+/* ==========================
+   FORMULARIOS
+========================== */
 
-.detalle-manga{
-    padding:80px 8%;
+.form-card{
+  max-width:700px;
+  margin:auto;
 }
 
-.detalle-card{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    background:white;
+.campo-error{
+  display:block;
+  margin-top:.35rem;
+  font-size:.9rem;
+  color:#dc3545;
+}
+
+/* ==========================
+   CARRITO
+========================== */
+
+/* Imágenes de las tarjetas del carrito (móvil) */
+#contenedor-carrito img{
+    width:100%;
+    height:90px;
+    object-fit:cover;
     border-radius:var(--radius);
-    padding:30px;
+}
+
+/* Imágenes de la tabla del carrito */
+#tabla-carrito-body img{
+    width:60px;
+    height:80px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+/* Resumen del carrito */
+#resumen-carrito{
+    border:none;
+    border-radius:var(--radius);
     box-shadow:var(--shadow);
 }
 
+/* ==========================
+   CHECKOUT
+========================== */
+
+#resumen-pedido{
+    max-height:450px;
+    overflow-y:auto;
+}
+
+/* ==========================
+   DETALLE DEL PRODUCTO
+========================== */
+
 .detalle-imagen img{
     width:100%;
-    max-height:700px;
+    max-height:600px;
     object-fit:cover;
     border-radius:var(--radius);
 }
 
 .detalle-info{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    border:none;
 }
 
-.detalle-info h2{
-    font-size:2.5rem;
-    margin-bottom:20px;
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+  background:var(--color-dark);
+  color:white;
+  text-align:center;
+  padding:2rem 0;
 }
 
-.detalle-info p{
-    margin-bottom:15px;
-    font-size:1.1rem;
+footer h3{
+  margin-bottom:.8rem;
 }
 
-.detalle-info .precio{
-    font-size:2rem;
+/* ==========================
+   ANIMACIÓN CONTADOR
+========================== */
+
+.contador-animado{
+  animation:pulseRed .35s;
 }
 
-/* =========================
-   CONTACTO
-========================= */
+@keyframes pulseRed{
 
-.contacto{
-    padding:80px 8%;
-}
+  0%{
+    transform:scale(1);
+  }
 
-.contacto h2{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2.5rem;
-}
+  50%{
+    transform:scale(1.25);
+  }
 
-#formulario-contacto{
-    max-width:700px;
-    margin:auto;
-    background:white;
-    padding:40px;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
+  100%{
+    transform:scale(1);
+  }
 
-#formulario-contacto input,
-#formulario-contacto textarea{
-    width:100%;
-    padding:15px;
-    border:2px solid #ddd;
-    border-radius:var(--radius);
-    font-size:1rem;
-    font-family:'Poppins', sans-serif;
-    outline:none;
-    transition:.3s;
-}
-
-#formulario-contacto input:focus,
-#formulario-contacto textarea:focus{
-    border-color:var(--color-primary);
-}
-
-#formulario-contacto textarea{
-    resize:vertical;
-    min-height:150px;
-}
-
-#formulario-contacto button{
-    align-self:flex-start;
-
-}
-/* =========================
-   CARRITO
-========================= */
-
-#contenedor-carrito{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    max-width:1000px;
-    margin:auto;
-}
-
-#contenedor-carrito .producto{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    padding:20px;
-}
-
-#contenedor-carrito .producto img{
-    width:120px;
-    height:170px;
-    object-fit:cover;
-    border-radius:var(--radius);
-    flex-shrink:0;
-}
-
-#contenedor-carrito .producto-info{
-    flex:1;
-}
-
-#contenedor-carrito .producto-info h3{
-    min-height:auto;
-    margin-bottom:10px;
-}
-
-#resumen-carrito{
-    max-width:1000px;
-    margin:40px auto 0;
-    background:white;
-    padding:30px;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    text-align:center;
-}
-
-#resumen-carrito h3{
-    font-size:1.8rem;
-    margin-bottom:20px;
-}
-
-#resumen-carrito .btn{
-    margin:10px;
-}
-
-/*FRAMES*/
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.producto,.detalle-card {
-    animation: fadeInUp .5s ease;
 }

@@ -1,21 +1,13 @@
-// =========================
-// CONTADOR DEL CARRITO
-// =========================
+function actualizarContador() {
+  const contador = document.getElementById("contador-carrito");
+  if (!contador) return;
 
-function actualizarContador(){
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    const contador =
-    document.getElementById("contador-carrito");
+  const totalUnidades = carrito.reduce((acc, item) => acc + (item.cantidad || 1), 0);
 
-    if(!contador) return;
-
-    const carrito =
-    JSON.parse(localStorage.getItem("carrito"))
-    || [];
-
-    contador.textContent = carrito.length;
+  contador.textContent = totalUnidades;
 
 }
 
-// Ejecutar al cargar
 actualizarContador();

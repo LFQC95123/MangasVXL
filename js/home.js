@@ -1,35 +1,23 @@
-// =========================
-// MANGAS DESTACADOS
-// =========================
 
-// Contenedor donde se mostrarán los mangas
 const contenedorDestacados = document.getElementById("productos-destacados");
+// Tomar los primeros 6 mangas como destacados
+const destacados = mangas.slice(0, 6);
 
-// Tomamos los primeros 3 mangas
-const destacados = mangas.slice(0, 3);
-
-// Generamos las tarjetas
 destacados.forEach(manga => {
+  const col = document.createElement("div");
+  col.className = "col";
 
-    const tarjeta = document.createElement("article");
+  col.innerHTML = `
+    <article class="card h-100 shadow-sm producto">
+      <img src="${manga.imagen}"alt="${manga.nombre}" class="card-img-top" style="height:350px; object-fit:cover;">
+      <div class="card-body producto-info d-flex flex-column">
+        <h3 class="card-title fs-6">${manga.nombre}</h3>
+        <p class="precio text-danger fw-bold">S/ ${manga.precio.toFixed(2)}</p>
+        <p class="card-text text-muted small">${manga.categoria}</p>
 
-    tarjeta.classList.add("producto");
+        <a href="pages/detalle.html?id=${manga.id}" class="btn btn-primary mt-auto" aria-label="Ver detalle de ${manga.nombre}"><i class="bi bi-eye me-1"></i> Ver detalle </a>
+      </div>
+    </article>`;
 
-    tarjeta.innerHTML = `
-        <img src="${manga.imagen}" alt="${manga.nombre}">
-
-        <div class="producto-info">
-            <h3>${manga.nombre}</h3>
-
-            <p class="precio">
-                S/ ${manga.precio.toFixed(2)}
-            </p>
-
-            <a href="pages/catalogo.html" class="btn">
-                Ver catálogo
-            </a>
-        </div>
-    `;
-
-    contenedorDestacados.appendChild(tarjeta);
+  contenedorDestacados.appendChild(col);
 });

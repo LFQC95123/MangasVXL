@@ -1,114 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Mangas VXL</title>
-        <!--Meta Datos-->
-    <meta name="description" content="Explora y descubre mangas populares con una interfaz moderna y fácil de usar.">
-    <meta name="keywords" content="manga, anime, mangas online, lectura, mangas populares">
-    <meta name="author" content="Grupo_E">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contáctanos en Mangas VXL. Estamos aquí para ayudarte.">
+  <meta name="author" content="Grupo_E">
+  <title>Contacto | Mangas VXL</title>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contacto | MangasVXL">
-    <meta property="og:description" content="Explora mangas populares y encuentra tus historias favoritas.">
-    <meta property="og:image" content="https://lfqc95123.github.io/MangasVXL/img/logo.png">
-    <meta property="og:url" content="https://lfqc95123.github.io/MangasVXL/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_PE">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MangasVXL">
-    <meta name="twitter:description" content="Explora mangas populares y encuentra tus historias favoritas.">
-    <meta name="twitter:image" content="https://lfqc95123.github.io/MangasVXL/img/logo.png">
+  <!-- Open Graph|Para compartir en las diversas redes sociales -->
+  <meta property="og:title"       content="Contacto | MangasVXL">
+  <meta property="og:description" content="Contáctanos en Mangas VXL. Estamos aquí para ayudarte.">
+  <meta property="og:image"       content="https://lfqc95123.github.io/MangasVXL/img/logo.png">
+  <meta property="og:url"         content="https://lfqc95123.github.io/MangasVXL/pages/contacto.html">
+  <meta property="og:type"        content="website">
+  <!-- Twitter Card|Para compartir en Twitter(X) -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="MangasVXL">
+  <meta name="twitter:description" content="Explora mangas populares y encuentra tus historias favoritas.">
+  <meta name="twitter:image"       content="https://lfqc95123.github.io/MangasVXL/img/logo.png"> 
+  
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons CDN — S14 diapositiva 15 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Navegación principal">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand-custom" href="../index.html">MANGAS <span>VXL</span></a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="carrito.html" aria-label="Ver carrito de compras"><i class="bi bi-cart3"></i>
+                <span class="d-none d-md-inline">Carrito</span>
+                <span id="contador-carrito" class="badge bg-danger rounded-pill ms-1" aria-live="polite">0</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="logo">
-            <h1>MANGAS <span>VXL</span></h1>
+  <main>
+    <section class="seccion" aria-labelledby="titulo-contacto">
+      <div class="container">
+
+        <h2 class="seccion-titulo" id="titulo-contacto">Contáctanos</h2>
+
+        <form id="formulario-contacto" class="form-card" novalidate aria-label="Formulario de contacto">
+
+          <!-- Nombre -->
+          <div class="mb-3">
+            <label for="nombre" class="form-label"> Nombre completo <span class="text-danger">*</span></label>
+              <input type="text" id="nombre" class="form-control" placeholder="Ej: Luis Fernando Quispe Castillo" autocomplete="name">
+                <span id="error-nombre" class="campo-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Correo -->
+          <div class="mb-3">
+            <label for="correo" class="form-label"> Correo electrónico <span class="text-danger">*</span></label>
+              <input type="email" id="correo" class="form-control" placeholder="correo@ejemplo.com" autocomplete="email">
+                <span id="error-correo" class="campo-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Asunto -->
+          <div class="mb-3">
+            <label for="asunto" class="form-label"> Asunto <span class="text-danger">*</span></label>
+              <input type="text" id="asunto" class="form-control" placeholder="¿En qué te podemos ayudar?">
+                <span id="error-asunto" class="campo-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="mb-4">
+            <label for="mensaje" class="form-label">Mensaje <span class="text-danger">*</span></label>
+              <textarea id="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje aquí (mínimo 10 caracteres)..."></textarea>
+                <span id="error-mensaje" class="campo-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- CAMBIO: Bootstrap Icons bi-send en botón de envío (S14 diap. 15) -->
+          <button type="submit" class="btn btn-primary w-100" ><i class="bi bi-send me-2"></i>Enviar mensaje</button>
+            <p class="text-muted small mt-3 text-center"><span class="text-danger">*</span> Campos obligatorios</p>
+
+        </form>
+
+        <!-- Mensaje de éxito — formulario.js lo muestra al enviar -->
+        <div id="mensaje-exito-contacto" class="d-none alert alert-success mt-4 text-center form-card" role="status" aria-live="polite">
+          ✅ <strong>¡Mensaje enviado!</strong> Te responderemos a la brevedad.
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="carrito.html">🛒<span id="contador-carrito">0</span></a></li>
-            </ul>
-        </nav>
+      </div>
+    </section>
+  </main>
 
-    </header>
+  <footer>
+    <div class="container">
+      <h3>Mangas VXL</h3>
+      <p>Tu tienda especializada en mangas en español.</p>
+      <p class="mb-0">© 2026 Mangas VXL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-    <!-- FORMULARIO -->
-    <main>
-
-        <section class="contacto">
-
-            <h2>Contáctanos</h2>
-
-            <form id="formulario-contacto">
-
-                <input
-                    type="text"
-                    id="nombre"
-                    placeholder="Nombre completo"
-                    required
-                >
-
-                <input
-                    type="email"
-                    id="correo"
-                    placeholder="Correo electrónico"
-                    required
-                >
-
-                <input
-                    type="text"
-                    id="asunto"
-                    placeholder="Asunto"
-                    required
-                >
-
-                <textarea
-                    id="mensaje"
-                    rows="6"
-                    placeholder="Escribe tu mensaje..."
-                    required
-                ></textarea>
-
-                <button type="submit" class="btn">
-                    Enviar mensaje
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-
-        <h3>Mangas VXL</h3>
-
-        <p>Tu tienda especializada en mangas en español.</p>
-
-        <p>© 2026 Mangas VXL. Todos los derechos reservados.</p>
-
-    </footer>
-
-    <script src="../js/formulario.js"></script>
-    <script src="../js/contador.js"></script>
-    <script src="../js/carrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/contador.js"></script>
+  <script src="../js/formulario.js"></script>
+  <script src="../js/carrito.js"></script>
 
 </body>
 </html>
