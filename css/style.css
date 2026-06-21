@@ -177,8 +177,12 @@ a{
 ========================== */
 
 .btn-filtro.activo{
-  background:var(--color-primary);
+  background:var(--color-accent);
   color:white;
+}
+.btn-filtro{
+  padding: 5px 15px;
+  border-radius:var(--radius);
 }
 
 /* ==========================
