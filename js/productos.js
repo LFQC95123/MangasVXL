@@ -62,5 +62,13 @@ const mangas = [
     categoria: "Shonen",
     imagen: "img/naruto.jpg",
     descripcion: "La saga épica de Naruto Uzumaki llega a su emotivo desenlace final."
-  }
+  },
+  {
+    id: 9,
+    nombre: "Spy x Family Vol. 3 - Misión Familiar",
+    precio: 39.90,
+    categoria: "Comedia",
+    imagen: "img/spy-family.jpg",
+    descripcion: "La peculiar familia Forger enfrenta nuevos desafíos mientras mantiene en secreto sus verdaderas identidades."
+}
 ];

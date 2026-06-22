@@ -1,13 +1,4 @@
-/* ==========================================================
-   MANGAS VXL
-   style.css
-   Contiene únicamente los estilos personalizados.
-   Bootstrap se encarga del layout responsive.
-========================================================== */
-
-/* ==========================
-   VARIABLES
-========================== */
+/*VARIABLES DE IDENTIDAD*/
 
 :root{
   --color-primary:#e63946;
@@ -20,9 +11,7 @@
   --transition:.3s ease;
 }
 
-/* ==========================
-   ESTILOS GENERALES
-========================== */
+/*ESTILOS GENERALES*/
 
 body{
   background:var(--color-light);
@@ -34,9 +23,7 @@ a{
   transition:var(--transition);
 }
 
-/* ==========================
-   NAVBAR
-========================== */
+/*NAVBAR*/
 
 .navbar-brand-custom{
   font-size:1.7rem;
@@ -60,9 +47,7 @@ a{
   color:var(--color-primary)!important;
 }
 
-/* ==========================
-   BANNER PRINCIPAL
-========================== */
+/*BANNER PRINCIPAL*/
 
 .banner{
   min-height:75vh;
@@ -89,9 +74,7 @@ a{
   margin:1.5rem 0;
 }
 
-/* ==========================
-   BOTÓN PERSONALIZADO
-========================== */
+/*BOTÓN PERSONALIZADO*/
 
 .btn-vxl{
   display:inline-block;
@@ -107,9 +90,7 @@ a{
   color:white;
 }
 
-/* ==========================
-   SECCIONES
-========================== */
+/*SECCIONES*/
 
 .seccion{
   padding:5rem 0;
@@ -121,9 +102,7 @@ a{
   font-weight:700;
 }
 
-/* ==========================
-   TARJETAS DE PRODUCTOS
-========================== */
+/*TARJETAS DE PRODUCTOS*/
 
 .producto{
   border:none;
@@ -147,9 +126,7 @@ a{
   font-weight:bold;
 }
 
-/* ==========================
-   CATEGORÍAS
-========================== */
+/*CATEGORÍAS*/
 
 .card-categoria{
   display:block;
@@ -167,9 +144,7 @@ a{
   color:white;
 }
 
-/* ==========================
-   FILTROS
-========================== */
+/*FILTROS*/
 
 .btn-filtro.activo{
   background:var(--color-accent);
@@ -180,9 +155,7 @@ a{
   border-radius:var(--radius);
 }
 
-/* ==========================
-   NOSOTROS
-========================== */
+/*NOSOTROS*/
 
 .nosotros{
   max-width:900px;
@@ -190,9 +163,7 @@ a{
   text-align:center;
 }
 
-/* ==========================
-   FORMULARIOS
-========================== */
+/*FORMULARIOS*/
 
 .form-card{
   max-width:700px;
@@ -206,9 +177,7 @@ a{
   color:#dc3545;
 }
 
-/* ==========================
-   CARRITO
-========================== */
+/* CARRITO*/
 
 /* Imágenes de las tarjetas del carrito (móvil) */
 #contenedor-carrito img{
@@ -233,18 +202,14 @@ a{
     box-shadow:var(--shadow);
 }
 
-/* ==========================
-   CHECKOUT
-========================== */
+/* CHECKOUT*/
 
 #resumen-pedido{
     max-height:450px;
     overflow-y:auto;
 }
 
-/* ==========================
-   DETALLE DEL PRODUCTO
-========================== */
+/*DETALLE DEL PRODUCTO*/
 
 .detalle-imagen img{
     width:100%;
@@ -257,9 +222,7 @@ a{
     border:none;
 }
 
-/* ==========================
-   FOOTER
-========================== */
+/* FOOTER*/
 
 footer{
   background:var(--color-dark);
@@ -272,9 +235,7 @@ footer h3{
   margin-bottom:.8rem;
 }
 
-/* ==========================
-   ANIMACIÓN CONTADOR
-========================== */
+/* ANIMACIÓN CONTADOR*/
 
 .contador-animado{
   animation:pulseRed .35s;
@@ -294,4 +255,30 @@ footer h3{
     transform:scale(1);
   }
 
+}
+
+/* ANIMACIÓN BANNER*/
+
+.banner-content h1{
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 3px;
+    animation: aparecer 1.2s ease-out,
+               brillo 2s ease-in-out infinite alternate 1.2s;
+}
+
+/* Aparece haciendo zoom */
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    70%{
+        transform: scale(1.08);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
