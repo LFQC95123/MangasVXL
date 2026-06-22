@@ -56,28 +56,17 @@
 
         <h2 class="seccion-titulo" id="titulo-checkout">Finalizar Compra</h2>
 
-        <!--
-          NUEVO ARCHIVO COMPLETO.
-          Layout Bootstrap de dos columnas:
-          col-lg-7: formulario de datos del cliente
-          col-lg-5: resumen del pedido (sticky)
-        -->
         <div class="row g-4">
-
-          <!-- ============================================
-               COLUMNA IZQUIERDA: Formulario de checkout
-               ============================================ -->
-          <!-- ============================================
-     COLUMNA IZQUIERDA: Formulario de checkout
-     ============================================ -->
+          <!-- COLUMNA IZQUIERDA: Formulario de checkout -->
           <div class="col-lg-7">
 
             <form id="formulario-checkout" class="form-card" novalidate aria-label="Formulario de datos de envío y pago">
 
-              <h3 class="h5 mb-4 border-bottom pb-2">Datos del cliente</h3>
+              <h5 class="mb-4 border-bottom pb-2">Datos del cliente</h5>
 
               <!-- Nombre completo -->
               <div class="mb-3">
+                <!----> 
                 <label for="co-nombre" class="form-label">Nombre completo <span class="text-danger">*</span></label>
                   <input type="text" id="co-nombre" class="form-control" placeholder="Ej: Luis Fernando Quispe Castillo" autocomplete="name">
                     <span id="error-co-nombre"class="campo-error" role="alert" aria-live="polite"></span>
@@ -97,7 +86,7 @@
                     <span id="error-co-telefono" class="campo-error" role="alert" aria-live="polite"></span>
               </div>
 
-              <h3 class="h5 mt-4 mb-3 border-bottom pb-2">Dirección de envío</h3>
+              <h5 class="mt-4 mb-3 border-bottom pb-2">Dirección de envío</h5>
 
               <!-- Dirección -->
               <div class="mb-3">
@@ -113,7 +102,7 @@
                     <span id="error-co-ciudad" class="campo-error" role="alert" aria-live="polite"></span>
               </div>
 
-              <h3 class="h5 mt-4 mb-3 border-bottom pb-2">Método de pago</h3>
+              <h5 class="mt-4 mb-3 border-bottom pb-2">Método de pago</h5>
 
               <div class="mb-4">
                 <label for="co-pago" class="form-label">Método de pago <span class="text-danger">*</span></label>
@@ -143,14 +132,11 @@
 
           </div>
 
-          <!-- ============================================
-               COLUMNA DERECHA: Resumen del pedido
-               (checkout.js lo rellena dinámicamente)
-               ============================================ -->
+          <!--COLUMNA DERECHA: Resumen del pedido-->
           <div class="col-lg-5">
             <div class="card shadow-sm p-4 sticky-lg-top" style="top:80px;">
 
-              <h3 class="h5 mb-3 border-bottom pb-2">Resumen del pedido</h3>
+              <h5 class="mb-3 border-bottom pb-2">Resumen del pedido</h5`>
 
               <!-- checkout.js inserta los ítems aquí -->
               <div id="resumen-pedido" class="mb-3">

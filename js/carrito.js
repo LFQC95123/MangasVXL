@@ -86,12 +86,12 @@ function mostrarCarrito() {
           <div class="col-3">
             <img src="../${item.manga.imagen}" alt="Portada de ${item.manga.nombre}" class="img-fluid rounded">
           </div>
-          <div class="col-6 ps-3">
+          <div class="col-5 ps-3">
             <h5 class="mb-1 fs-6">${item.manga.nombre}</h5>
             <p class="text-muted mb-1 small">${item.manga.categoria}</p>
             <p class="text-danger fw-bold mb-0">S/ ${item.manga.precio.toFixed(2)}</p>
           </div>
-          <div class="col-3 text-end">
+          <div class="col-4 text-end">
             <div class="d-flex align-items-center justify-content-end gap-1 mb-2">
               <button class="btn btn-outline-secondary btn-sm btn-restar" data-index="${index}" aria-label="Reducir cantidad">−</button>
               <span class="fw-bold px-1">${item.cantidad}</span>
