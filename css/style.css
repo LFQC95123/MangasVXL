@@ -15,7 +15,6 @@
   --color-light:#f8f9fa;
   --color-dark:#111111;
   --color-accent:#ffd60a;
-
   --shadow:0 5px 15px rgba(0,0,0,.15);
   --radius:12px;
   --transition:.3s ease;
@@ -72,11 +71,7 @@ a{
   align-items:center;
   text-align:center;
   padding:4rem 1rem;
-
-  background:linear-gradient(rgba(0,0,0,.55),
-             rgba(0,0,0,.55)),
-             url("../img/banner.jpg") center/cover no-repeat;
-
+  background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url("../img/banner.jpg") center/cover no-repeat;
   color:white;
 }
 
@@ -160,7 +155,7 @@ a{
   display:block;
   padding:2rem 1rem;
   border-radius:var(--radius);
-  background:white;
+  background:rgb(62, 161, 241);
   text-align:center;
   color:var(--color-dark);
   box-shadow:var(--shadow);

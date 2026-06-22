@@ -54,7 +54,6 @@
 
   <main>
 
-    <!-- Título de sección -->
     <section class="seccion pb-0" aria-labelledby="titulo-catalogo">
       <div class="container">
         <h2 class="seccion-titulo" id="titulo-catalogo">Catálogo de Mangas</h2>
@@ -64,8 +63,11 @@
     <!-- BUSCADOR|-->
     <section class="py-3" aria-label="Búsqueda de mangas">
       <div class="container">
+        <!-- Display flex |centra todo el contenido al centro--> 
         <div class="d-flex justify-content-center">
+          <!-- w-100 |ocupa el 100% del ancho disponible| pero un maximo de 600px--> 
           <div class="w-100" style="max-width:600px;">
+            <!-- Uso de elementos para la búsqueda|ademas de una correcta accesibilidad--> 
             <label for="busqueda" class="visually-hidden">Buscar manga por nombre</label>
             <input type="search" id="busqueda" class="form-control form-control-lg" placeholder="Buscar manga..." aria-label="Buscar manga por nombre">
           </div>
@@ -76,6 +78,7 @@
     <!-- FILTROS POR CATEGORÍA -->
     <section class="py-3" aria-label="Filtros por categoría">
       <div class="container">
+        <!-- Dispaly flex|reajuste cuando esl espacio es pequeño|contenido centrado|gap de 16px--> 
         <div class="d-flex flex-wrap justify-content-center gap-3">
           <button class="btn-filtro activo" data-categoria="Todos"        aria-pressed="true">Todos</button>
           <button class="btn-filtro"        data-categoria="Shonen"       aria-pressed="false">Shonen</button>
@@ -86,17 +89,10 @@
       </div>
     </section>
 
-    <!-- PRODUCTOS — grilla Bootstrap -->
+    <!-- PRODUCTOS-->
     <section class="seccion pt-3" aria-live="polite" aria-label="Listado de mangas">
       <div class="container">
-        <!--
-          CAMBIO: se usa Bootstrap row + col para la grilla.
-          catalogo.js inyecta <div class="col"> con cada card.
-          row-cols-1 → 1 col en móvil
-          row-cols-sm-2 → 2 cols en tablet
-          row-cols-lg-3 → 3 cols en escritorio
-          row-cols-xl-4 → 4 cols en pantallas grandes
-        -->
+        <!-- Bootstrap row para los productos segun el tamaño de la pantalla -->
         <div id="catalogo-productos" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
           <!-- catalogo.js inserta los productos aquí -->
         </div>

@@ -1,7 +1,7 @@
 
 const contenedorDestacados = document.getElementById("productos-destacados");
-// Tomar los primeros 6 mangas como destacados
-const destacados = mangas.slice(0, 6);
+// Tomar los primeros 3 mangas como destacados
+const destacados = mangas.slice(0, 3);
 
 destacados.forEach(manga => {
   const col = document.createElement("div");
